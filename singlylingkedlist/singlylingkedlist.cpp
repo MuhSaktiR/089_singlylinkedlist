@@ -21,3 +21,8 @@ public:
 	bool delNode(int elemenet);
 	void traverse();
 };
+
+List::List()
+{
+	START = NULL;
+}
