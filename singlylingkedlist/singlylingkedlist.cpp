@@ -35,4 +35,17 @@ void List::addNode() /*Menambah sebuah Node kedalam list*/
 	cin >> nim;
 	cout << "\nMasukkan Nama: ";
 	cin >> nm;
+
+	Node* nodeBaru = new Node;
+	nodeBaru->noMhs = nim;
+	strcpy_s(nodeBaru->nama, nm);
+
+	if (START == NULL || nim <= START->noMhs)
+	{
+		if ((START != NULL) && (nim == START->noMhs))
+		{
+			cout << "\nDuplikasi noMHs tidak diinjinkan\n";
+			return;
+		}
+	}
 }
